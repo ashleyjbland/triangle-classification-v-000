@@ -1,5 +1,5 @@
 class Triangle
-  
+
 
   def initialize(a, b, c)
     @a = a
@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    if side1 + side2 || side1 + side3 || side2 + side3 > side1 || side2 || side3
+    if a + b || a + c || b + c > a || b || c
       begin
         raise TriangleError
       rescue TriangleError => error
@@ -22,5 +22,5 @@ class Triangle
       "The sum of the lengths of any two sides of a triangle always exceeds the length of the third side."
     end
   end
-  
+
 end
