@@ -8,7 +8,7 @@ class Triangle
   end
 
   def kind
-    TriangleError if @a + @b > @c || @a + @c > @b || @a <= 0 || @b <= 0 || @c <= 0
+    TriangleError if @a + @b < @c || @a + @c < @b || @b + @c < @a || @a <= 0 || @b <= 0 || @c <= 0
     :equilateral if @a == @b && @a == @c && @b == @c
     :isosceles if @a == @b || @a == @c || @b == @c
     :scalene if @a != @b && @a != @c && @b != @c
