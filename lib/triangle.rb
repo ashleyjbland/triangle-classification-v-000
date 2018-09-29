@@ -14,19 +14,14 @@ class Triangle
       #rescue TriangleError => error
         #puts error.message
       #end
-    if @a == @b && @a == @c && @b == @c
-      :equilateral
-    elsif @a != @b && @a != @c && @b != @c
-      :scalene
-    elsif @a == @b || @a == @c || @b == @c
-      :isosceles
+    :equilateral if @a == @b && @a == @c && @b == @c
+    :isosceles if @a == @b || @a == @c || @b == @c
+    :scalene if @a != @b && @a != @c && @b != @c
+
     end
   end
 
   class TriangleError < StandardError
-    def message
-      "Your triangle is illegal!"
-    end
   end
 
 end
