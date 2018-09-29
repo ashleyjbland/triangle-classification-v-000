@@ -25,7 +25,7 @@ class Triangle
 
   class TriangleError < StandardError
     def message
-      "The sum of the lengths of any two sides of a triangle always exceeds the length of the third side."
+      "Your triangle is illegal!"
     end
   end
 
