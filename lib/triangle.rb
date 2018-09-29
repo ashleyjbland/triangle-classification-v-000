@@ -20,8 +20,6 @@ class Triangle
       :scalene
     elsif @a == @b || @a == @c || @b == @c
       :isosceles
-
-    end
     end
   end
 
