@@ -21,7 +21,6 @@ class Triangle
     elsif @a == @b || @a == @c || @b == @c
       :isosceles
     end
-    end
   end
 
   class TriangleError < StandardError
