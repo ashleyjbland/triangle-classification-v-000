@@ -9,9 +9,9 @@ class Triangle
 
   def kind
     #TriangleError if @a + @b < @c || @a + @c < @b || @b + @c < @a || @a <= 0 || @b <= 0 || @c <= 0
-    :equilateral if @a == @b && @a == @c && @b == @c
-    :isosceles if @a == @b || @a == @c || @b == @c
-    :scalene if @a != @b && @a != @c && @b != @c
+    return :equilateral if @a == @b && @a == @c && @b == @c
+    return :isosceles if @a == @b || @a == @c || @b == @c
+    return :scalene if @a != @b && @a != @c && @b != @c
   end
 
   class TriangleError < StandardError
