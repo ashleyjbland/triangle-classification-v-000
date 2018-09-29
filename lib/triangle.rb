@@ -12,8 +12,6 @@ class Triangle
     :equilateral if @a == @b && @a == @c && @b == @c
     :isosceles if @a == @b || @a == @c || @b == @c
     :scalene if @a != @b && @a != @c && @b != @c
-
-    end
   end
 
   class TriangleError < StandardError
